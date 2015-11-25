@@ -3,20 +3,22 @@
 
 <div class="landing-page container">
   <div class="landing-container">
-    <div class="left">
-      <h1>Hacker App</h1>
-      <p class="former">Formerly <%= link_to "Fiddles", "http://fiddlesapp.co", target: '_blank' %></p>
-      <h2>Create the next Facebook, Learn NodeJS or make a few quick edits.</h2>
-      <p>Hacker App's many features allow you to write in HTML, CSS, SASS, LESS, or JS, create NodeJS and AngularJS projects and edit files on FTP, S3, Github, Dropbox, Box and Dropigee.</p>
-      <%= link_to("http://twitter.com/hackerforios", class: ["twitter","desktop"], target: '_blank') do %>
-          <i class="fa fa-twitter"></i>Follow us On Twitter
-      <% end %>
-      <%= link_to("http://twitter.com/hackerapp", class:["twitter", "mobile"], target: '_blank') do %>
-        Follow us<br>On Twitter
-      <% end %>
-    </div>
-    <div class="right">
-      <%= image_tag "iphone3.png", alt: "Hacker App, an IDE for iPhone and iPad" %>
+    <div class="landing-content">
+      <div class="left">
+        <h1>Hacker App</h1>
+        <p class="former">Formerly <%= link_to "Fiddles", "http://fiddlesapp.co", target: '_blank' %></p>
+        <h2>Create the next Facebook, Learn NodeJS or make a few quick edits.</h2>
+        <p>Hacker App's many features allow you to write in HTML, CSS, SASS, LESS, or JS, create NodeJS and AngularJS projects and edit files on FTP, S3, Github, Dropbox, Box and Dropigee.</p>
+        <%= link_to("http://twitter.com/hackerforios", class: ["twitter","desktop"], target: '_blank') do %>
+            <i class="fa fa-twitter"></i>Follow us On Twitter for Updates
+        <% end %>
+        <%= link_to("http://twitter.com/hackerforios", class:["twitter", "mobile"], target: '_blank') do %>
+          Follow us On<br>Twitter for Updates
+        <% end %>
+      </div>
+      <div class="right">
+        <%= image_tag "iphone3.png", alt: "Hacker App, an IDE for iPhone and iPad" %>
+      </div>
     </div>
   </div>
 </div>

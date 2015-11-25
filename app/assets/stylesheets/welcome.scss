@@ -33,61 +33,69 @@ body{
   margin-top:3em;
   position:relative;
   top:-1.5em;
+  display:table;
+  width:100%;
+  height:100vh;
 
   .landing-container{
-    width:60%;
-    display:inline-block;
+    display:table-cell;
+    vertical-align:middle;
     text-align: center;
 
-    .left{
-      float:left;
-      width:60%;
-      text-align: left;
-      padding-right:20px;
+    .landing-content{
+      width:75%;
+      display:inline-block;
 
-      h1{
-        font-size:4em;
-        margin-bottom:0;
+      .left{
+        float:left;
+        width:60%;
+        text-align: left;
+        padding-right:20px;
+
+        h1{
+          font-size:4em;
+          margin-bottom:0;
+        }
+
+        .former{
+          margin-top:0;
+          margin-bottom:2em;
+
+          a{
+           color:white;
+         }
+        }
+
+        a.twitter {
+            display:inline-block;
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold;
+            border: 3px solid white;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin-top:2em;
+            transition:color 0.3s ease-out, background 0.3s ease-out;
+
+            i{
+              padding-right:10px;
+            }
+
+            &:hover{
+              background:white;
+              color:$orange;
+            }
+        }
+
+        a.twitter.mobile{
+          display:none;
+        }
       }
 
-      .former{
-        margin-top:0;
-        margin-bottom:2em;
-
-        a{
-         color:white;
-       }
+      .right{
+        float:right;
       }
-
-      a.twitter {
-          display:inline-block;
-          text-decoration: none;
-          color: white;
-          text-transform: uppercase;
-          font-weight: bold;
-          border: 3px solid white;
-          border-radius: 5px;
-          padding: 10px 20px;
-          margin-top:2em;
-          transition:color 0.3s ease-out, background 0.3s ease-out;
-
-          i{
-            padding-right:10px;
-          }
-
-          &:hover{
-            background:white;
-            color:$orange;
-          }
-      }
-
-      a.twitter.mobile{
-        display:none;
-      }
-    }
-
-    .right{
-      float:right;
     }
   }
 }
@@ -95,7 +103,9 @@ body{
 @media only screen and (max-width: 1330px){
   .landing-page{
     .landing-container{
+      .landing-content{
         width:85%;
+      }
     }
   }
 }
@@ -103,8 +113,10 @@ body{
 @media only screen and (min-width: 1331px) and (max-width: 1425px){
   .landing-page{
     .landing-container{
-      .left{
-        width:50%;
+      .landing-content{
+        .left{
+          width:50%;
+        }
       }
     }
   }
@@ -119,11 +131,13 @@ body{
 @media only screen and (max-width: 1000px){
   .landing-page{
     .landing-container{
-      width:95%;
+      .landing-content{
+        width:95%;
 
-      h1{
-        margin-top:20px;
-        padding-bottom:20px;
+        h1{
+          margin-top:20px;
+          padding-bottom:20px;
+        }
       }
     }
   }
@@ -134,28 +148,30 @@ body{
     margin-top:20px;
 
     .landing-container{
-      width:100%;
+      .landing-content{
+        width:100%;
 
-      .left{
-        margin-bottom:2em;
-        width:70%;
-        float:none;
-        text-align: center;
-        padding-bottom:5em;
-        display:inline-block;
-
-        a.twitter.desktop{
-          display:none;
-        }
-
-        a.twitter.mobile{
+        .left{
+          margin-bottom:2em;
+          width:70%;
+          float:none;
+          text-align: center;
+          padding-bottom:5em;
           display:inline-block;
-        }
-      }
 
-      .right{
-        float:none;
-        margin-top:-3em;
+          a.twitter.desktop{
+            display:none;
+          }
+
+          a.twitter.mobile{
+            display:inline-block;
+          }
+        }
+
+        .right{
+          float:none;
+          margin-top:-3em;
+        }
       }
     }
   }
